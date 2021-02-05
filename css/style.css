@@ -1,0 +1,184 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0 10px;
+}
+
+
+body {
+    width: 99%;
+    background-image: url("../images/miraisekaibg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(149, 204, 186);
+    font-family: 'Yikes';
+    font-weight: normal;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@font-face {
+    font-family: 'Yikes';
+    src: url('../fonts/Yikes.ttf') format('truetype');
+}
+
+.player {
+    height: 370px;
+    width: 800px;
+    background-color: rgb(116, 76, 76);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.player .seek-bar {
+    position: relative;
+    margin-top: 25.5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 800px;
+    height: 20px;
+    background: #cccccc;
+    cursor: pointer;
+}
+
+.player .seek-bar .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #666666;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+}
+
+.seekBarKnob {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: chocolate;
+    transform: translateX(-8px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+}
+
+img {
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: 0.3s cubic-bezier(.51, .92, .24, 1.15);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+}
+
+.imgScale {
+    transform: scale(0.9, 0.9);
+}
+
+.playSvg,
+.previousSvg,
+.nextSvg,
+.pauseSvg {
+    height: 70px;
+    width: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 20px;
+    transition: opacity 1s;
+    cursor: pointer;
+}
+
+
+.playSvg:active,
+.pauseSvg:active,
+.previousSvg:active {
+    transition: 0.3s cubic-bezier(0, 1.2, .2, 1.5);
+    transform: scale(0.9, 0.9)
+}
+
+.nextSvg:active {
+    transform: rotate(180deg) scale(0.9, 0.9);
+    transition: 0.3s cubic-bezier(0, 1.2, .2, 1.5);
+}
+
+.nextSvg {
+    transform: rotate(180deg);
+}
+
+.hidePause {
+    display: none;
+}
+
+.hidePlay {
+    display: none;
+}
+
+.player .volume-bar {
+    position: relative;
+    margin-top: -160px;
+    margin-left: 410px;
+    border-radius: 10px;
+    width: 300px;
+    height: 10px;
+    background: #cccccc;
+    cursor: pointer;
+}
+
+.player .volume-bar .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #666666;
+    background-clip: content-box;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+}
+
+.volumeBarKnob {
+    position: absolute;
+    top: -5px;
+    left: 240px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    transform: translateX(-8px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+}
+
+h1 {
+    margin-top: -150px;
+    margin-left: 320px;
+    text-align: center;
+
+}
+
+h2 {
+    margin-left: 320px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.curtimetext {
+    margin-top: 180px;
+    margin-left: 10px;
+}
+
+.durtimetext {
+    margin-top: -20px;
+    margin-left: 750px;
+}
